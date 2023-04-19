@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Text;
+using System.Collections.Generic;
+using System.IO;
+
 
 namespace PII_Game_Of_Life
 {
@@ -6,7 +10,10 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TableroCompleto gameboard = new TableroCompleto();
+            int boardHeight= gameboard.getHeight();
+            int boardWidth= gameboard.getWidth();
+            TableroCompleto.Play(gameboard, boardHeight,boardWidth);
         }
     }
 }
